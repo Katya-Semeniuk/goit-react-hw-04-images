@@ -6,9 +6,9 @@ import Modal from '../Modal/Modal';
 export default function ImageGalleryItem({ webformatURL, largeImageURL }) {
   const [showModal, setShowModal] = useState(false);
 
-  // -фбо перезаписати з попереднього
+  // -aбо перезаписати з попереднього
   const toggleModal = () => {
-    setShowModal(!this.state.showModal);
+    setShowModal(!showModal);
   };
 
   return (
@@ -26,37 +26,6 @@ export default function ImageGalleryItem({ webformatURL, largeImageURL }) {
     </>
   );
 }
-
-// ---
-// class ImageGalleryItem extends Component {
-//   state = {
-//     showModal: false,
-//   };
-
-//   toggleModal = () => {
-//     this.setState({ showModal: !this.state.showModal });
-//   };
-
-//   render() {
-//     const { webformatURL, largeImageURL } = this.props;
-//     return (
-//       <>
-//         <li onClick={this.toggleModal} className="gallery_item">
-//           <img src={webformatURL} alt="" />
-//         </li>
-//         {this.state.showModal && (
-//           <Modal
-//             onClose={this.toggleModal}
-//             largeImageURL={largeImageURL}
-//             toggleModal={this.toggleModal}
-//           />
-//         )}
-//       </>
-//     );
-//   }
-// }
-
-// export default ImageGalleryItem;
 
 ImageGalleryItem.propTypes = {
   webformatURL: PropTypes.string.isRequired,
